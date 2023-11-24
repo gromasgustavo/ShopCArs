@@ -1,0 +1,636 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: visible;
+    position: static;
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #364552;
+    color: #fff;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    transition: transform 0.3s;
+}
+
+.logo-header {
+    max-width: 12rem;
+}
+
+
+.nav-lista {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+
+}
+
+.nav-lista a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.nav-lista a:hover,
+.links-bienvenida a:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.abrir,
+.cerrar {
+    display: none;
+}
+
+
+body {
+    background-color: rgb(207, 204, 204);
+}
+
+main {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.bienvenida {
+    background-image: url("../static/img/bienvenida.jpg");
+    background-size: cover;
+    aspect-ratio: 4/3;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.banner-h1 {
+    color: #333;
+    font-size: 5vw;
+    text-shadow: 2px 2px 0px whitesmoke;
+}
+
+.links-bienvenida {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2vw;
+}
+
+.links-bienvenida a {
+    text-decoration: none;
+    color: rgb(235, 227, 227);
+    text-shadow: 2px 2px 0px black;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.propaganda {
+    text-align: center;
+}
+
+.propaganda h2,
+.destacado h4 {
+    margin: 1.8rem 0;
+    font-size: 3rem;
+}
+
+.propaganda .propaganda-video {
+    aspect-ratio: 7.5/3.5;
+    width: 100%;
+}
+
+.destacado {
+    margin: 10px 0;
+}
+
+.destacado h4 {
+    text-align: center;
+}
+
+.destacado article {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.descripcion-auto {
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.auto-destacado {
+    aspect-ratio: 494/320;
+    width: 60%;
+}
+
+.footer {
+    min-width: 100%;
+    background-color: #364552;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 30px;
+    padding: 10px 15px;
+    gap: 8px;
+    justify-items: center;
+    grid-template-areas:
+        "horario informacion sociales tiempo"
+        "derechos derechos derechos derechos";
+}
+
+
+.footer .horario {
+    grid-area: horario;
+}
+
+.footer .horario,
+.footer .informacion,
+.informacion .nav-lista,
+.datos-clima .caja2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-footer {
+    max-width: 90%;
+    filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(0%) hue-rotate(56deg) brightness(104%) contrast(106%);
+
+}
+
+.logo-footer:hover {
+    filter: brightness(0) saturate(100%) invert(4%) sepia(20%) saturate(2005%) hue-rotate(143deg) brightness(92%) contrast(96%);
+}
+
+.info-horario {
+    font-size: 1rem;
+}
+
+
+.footer .informacion {
+    grid-area: informacion;
+}
+
+.footer .informacion .nav {
+    margin-top: 10px;
+}
+
+.footer .informacion .nav-lista li a {
+    font-size: 1rem;
+}
+
+.subtitulo-footer {
+    font-weight: bolder;
+    font-size: 1.65rem;
+}
+
+.footer .informacion .nav-lista a:hover {
+    background-color: transparent;
+    color: #081824
+}
+
+.footer .sociales {
+    grid-area: sociales;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.icono-redes:hover {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(58%) saturate(5996%) hue-rotate(198deg) brightness(91%) contrast(94%);
+}
+
+.footer .datos-clima {
+    text-transform: capitalize;
+    grid-area: tiempo;
+    display: flex;
+    gap: 20px;
+}
+
+.datos-clima .caja2 {
+    font-size: 0.8rem;
+    gap: 20px;
+}
+
+
+.informacion .nav-lista a:hover {
+    color: #c5d9ed;
+
+}
+
+#icono-animado {
+    width: 90%;
+    background-color: transparent;
+}
+
+
+
+.footer .derechos {
+    grid-area: derechos;
+    margin: 0 auto;
+}
+
+.grid-container {
+
+    width: 95%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 35px;
+}
+
+
+.grid-item {
+    background-color: #b3b2ad;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-item img {
+    width: 100%;
+    aspect-ratio: 568/426;
+}
+
+.grid-item-siguiente a,
+.grid-item-regresar a {
+    font-style: italic;
+    font-size: x-large;
+    justify-content: end;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.grid-item-vacio {
+    margin-top: 0px;
+    margin-right: 0px;
+    height: 1px;
+    width: 1px;
+}
+
+.test-c3 {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* INICIAR SESION */
+.sancor {
+    display: flex;
+    justify-content: center;
+}
+
+.sancor img {
+    margin-top: 17px;
+    background-image: url(./static/img/seguro.jpg);
+    width: 300px;
+    height: 180px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    animation: sancor 1s linear 1s forwards;
+}
+
+@keyframes sancor {
+
+    /*animación"*/
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+#formulario-ingresar {
+    border: solid;
+    border-radius: 10px;
+    width: 310px;
+    height: 250px;
+    background-image: url("../static/img/auto-iniciar-sesion.jpg");
+    background-size: cover;
+    background-position: 25% 60%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.items-ingresa {
+    width: 80%;
+    height: 85%;
+    border: 1.5px solid rgb(77, 73, 73);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: x-large;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: end;
+    gap: 10px;
+}
+
+.input {
+    width: 100%;
+}
+
+#input-email,
+#input-password {
+    width: 100%;
+    border: 2px solid rgb(55, 59, 55);
+    border-radius: 10px;
+    padding: 4px;
+    font-size: 1.1rem;
+}
+
+#submit,
+#submit-registrarse {
+    display: block;
+    font-family: system-ui;
+    font-size: small;
+    width: 150px;
+    background-color: #a90064;
+    color: white;
+    padding: 4px 3px 6px 3px;
+    border-radius: 4px;
+    border: 3px outset black;
+    cursor: pointer;
+
+
+}
+
+#submit-registrarse {
+    text-decoration: none;
+    text-align: center;
+}
+
+#submit:hover,
+#submit-registrarse:hover {
+    background-color: #214d74;
+}
+
+/* REGISTRO */
+
+#formularioRegistrate {
+    display: flex;
+    border: 0px solid #dbd8d8;
+    border: solid;
+    border-radius: 4px;
+    background-color: #dbd8d8;
+    animation: flipInX 1s;
+    width: 100%;
+    height: 450px;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.items-registrate {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#password,
+#email,
+#tel,
+#nombre,
+#apellido,
+#fechaNacimiento {
+    border-right-width: 4px;
+    width: 86.3vw;
+    margin-top: 20px;
+    font-size: 27px;
+}
+
+
+#submit-enviar {
+    height: 45px;
+    width: 120px;
+    color: white;
+    background-color: #a90064;
+    padding: 2px 3px 2px 3px;
+    border-radius: 4px;
+    border-width: 3px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+
+h6 {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #a90064;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    border: 3px solid #ccc;
+}
+
+input.error {
+    border: 2px solid red;
+}
+
+input.ok {
+    border: 2px solid green;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 80%;
+
+}
+
+
+.cotizamos {
+    width: 98%;
+    margin: 10px auto;
+}
+
+.cotizamos h1 {
+    font-style: italic;
+    margin-left: 1.5vw;
+    margin-bottom: 1.5vw;
+    font-size: 1.8rem;
+}
+
+.cotizamos h3,
+h5 {
+    color: #6f94b9;
+    font-weight: bolder;
+    margin-left: 30px;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.cotizamos P {
+    margin-left: 1.5vw;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width:560px) {
+
+    .abrir img {
+        width: 1.3rem;
+        margin-right: 4vw;
+    }
+
+    .cerrar img {
+        width: 1.3rem;
+        filter: invert(100%) sepia(0%) saturate(4821%) hue-rotate(27deg) brightness(126%) contrast(102%);
+    }
+
+    .abrir,
+    .cerrar {
+        display: block;
+        margin-right: 1rem;
+        font-size: 1.3rem;
+        border: none;
+        background-color: transparent;
+    }
+
+    .header .nav {
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: end;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        padding: 2rem;
+        background-color: rgb(47, 49, 49);
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        gap: 1rem;
+    }
+
+    .header .nav .nav-lista {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+    }
+
+    .header .nav .nav-lista li a {
+        font-size: 1.7rem;
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* BODY  */
+
+    .banner-h1 {
+        color: #333;
+        font-size: 2rem;
+        text-shadow: 2px 2px 0px whitesmoke;
+    }
+
+    .links-bienvenida {
+        font-size: 1rem;
+    }
+
+    .propaganda h2,
+    .destacado h4 {
+        margin: 1rem 0;
+        font-size: 1.5rem;
+    }
+
+    .descripcion-auto {
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr) 30px;
+        gap: 10px 0;
+        grid-template-areas:
+            "horario"
+            "informacion"
+            "sociales"
+            "tiempo"
+            "derechos";
+    }
+
+    .logo-footer {
+        width: 50rem;
+    }
+
+    .info-horario {
+        display: flex;
+        font-size: 0.9rem;
+        gap: 8px;
+    }
+
+    .footer .informacion {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .informacion .nav .nav-lista {
+        flex-direction: row;
+    }
+
+
+    .footer .datos-clima {
+        gap: 50px;
+    }
+
+
+    /* compra 1 */
+    .grid-container {
+
+        width: 95%;
+        max-width: 100%;
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        flex-direction: row;
+        max-width: 320px;
+        justify-content: space-around;
+    }
+
+    .grid-item {
+        background-color: #d5d4cd;
+        padding: 25px 10px 10px 10px;
+    }
+
+
+    .grid-item img {
+        max-width: 100%;
+        width: 428px;
+        height: 220px;
+    }
+}

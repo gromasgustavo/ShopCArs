@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Nunito+Sans:opsz,wght@6..12,200&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon">
+    <title>Shop-Cars</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="./static/img/logo.jpg" alt="Logo" class="logo-header">
+        <button id="abrir" class="abrir"><img src="./static/img/menu.png" alt="menu"> </button>
+        <nav id="nav" class="nav">
+            <button id="cerrar" class="cerrar"><img src="./static/img/cerrar.png" alt="cerrar"></button>
+
+            <ul class="nav-lista">
+                <li><a href="./compra1.html">Comprar</a></li>
+                <li><a href="./cotizamos.html">Vender</a></li>
+                <li><a href="./iniciar sesión.html">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+
+        <section class="bienvenida">
+            <div class="banner">
+                <h1 class="banner-h1">¡Bienvenido a Shop-Cars!</h1>
+                <div class="links-bienvenida">
+                    <a href="./cotizamos.html">Evaluamos y cotizamos tu vehículo</a>
+
+                    <a href="./documentacion.html">Documentación al comprar o vender</a>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="propaganda">
+            <h2>Espacio patrocinado</h2>
+            <iframe class="propaganda-video" src="https://www.youtube.com/embed/jLI_htJPIYg?si=GppKGE5tGBDij4xx"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </section>
+
+
+        <section class="destacado">
+            <h4>Destacado del mes</h4>
+            <article>
+                <p class="descripcion-auto">Renault Captur 2.0 Zen <br>
+                    2019(44.000Km) <br> $13.000.000</p>
+                <img class="auto-destacado" src="./static/img/destacados/captur.jpg" alt="Renault Captur 2.0 Zen">
+            </article>
+        </section>
+
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="horario">
+            <a href="./index.html"> <img src="./static/img/logo-footer.png" alt="logo shopcars" class="logo-footer"></a>
+            <div class="info-horario">
+                <p>Podes visitarnos en:
+                    Sucursal Falucho 1323 (Mar Del Plata)</p>
+                <p>Nuestros horarios:
+                    Lunes a viernes de 09:00hs a 18:00hs</P>
+            </div>
+        </div>
+
+
+
+        <div class="informacion">
+            <h2 class="subtitulo-footer">Enlaces de interes</h2>
+            <nav class="nav">
+                <ul class="nav-lista">
+                    <li>
+                        <a href="./cotizamos.html#empresa">La empresa</a>
+                    </li>
+                    <li>
+                        <a href="">Términos y condiciones</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="sociales">
+            <h2 class="subtitulo-footer">Nuestras redes</h2>
+            <section class="redes">
+                <a href="https://www.facebook.com" async="" crossorigin="anonymous" title="Facebook"
+                    class="icono-redes"><img src="./static/iconos/facebook-circle-line.svg" width="45" height="45"></a>
+
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gromasgustavo@gmail.com.ar" title="Email"
+                    class="icono-redes"><img src="./static/iconos/mail-line.svg" width="45" height="45"></a>
+
+                <a href="https://www.instagram.com/" title="Instagram" class="icono-redes"><img
+                        src="./static/iconos/instagram-line.svg" width="45" height="45"></a>
+
+                <a href="https://api.whatsapp.com/send/?phone=2262509033" title="WhatsApp" id="whatsapp"
+                    target="_blank"><img src="./static/iconos/whatsapp-line.svg" width="45" height="45"
+                        class="icono-redes"></a>
+
+                <a href="https://www.google.com/maps/place/TU_DIRECCION_AQUI" target="_blank" title="Mapa"
+                    class="icono-redes"><img src="./static/iconos/map-pin-user-line.svg" width="45" height="45"></a>
+            </section>
+        </div>
+
+
+
+
+        <div class="datos-clima">
+
+            <div class="caja1">
+                <h2 id="ubicacion"></h2>
+                <img id="icono-animado" src="" alt="">
+            </div>
+
+            <div class="caja2">
+                <h1 id="temperatura-valor"></h1>
+                <h2 id="temperatura-descripcion"></h2>
+                <h3 id="tmax-tmin"></h3>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="derechos">
+            <small>1999-2023 ShopCars.com|Todos los derechos reservados.</small>
+        </div>
+
+
+
+    </footer>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/temp.js"></script>
+
+</body>
+
+</html>
